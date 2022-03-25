@@ -12,3 +12,4 @@ function toggleCapsLock() {
 function toggleDeleteKey() {
     deleteKey = true;
 }
+
