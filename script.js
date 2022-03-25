@@ -5,9 +5,19 @@ let capsLock = false;
 function toggleShift() {
     shift = true;
 }
+
+// toggle caps lock
 function toggleCapsLock() {
-    capsLock = capsLock !== true;
-}
+    if (capsLock === false) {
+      capsLock = true;
+      document.getElementById("capsLock").style.backgroundColor = "#09ff70";
+      document.getElementById("capsLock").style.color = "#111111";
+    } else {
+      capsLock = false;
+      document.getElementById("capsLock").style.backgroundColor = "#a02e32";
+      document.getElementById("capsLock").style.color = "#ffffff";
+    }
+  }
 
 // add or delete characters to/from input area
 function addChar(selection) {
