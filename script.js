@@ -1,6 +1,5 @@
 let shift = false;
 let capsLock = false;
-let deleteKey = false;
 
 // toggle keys
 function toggleShift() {
@@ -12,11 +11,11 @@ function toggleCapsLock() {
 
 // add or delete characters to/from input area
 function addChar(selection) {
-    var currChars = $("#inputBox").val();
+    let currChars = $("#inputBox").val();
     if (selection === "delete") {
         $("#inputBox").val(currChars.substring(0, currChars.length - 1));
     } else {
-        if (capsLock === true) {
+        if (capsLock === true && isNaN(selection)) {
             $("#inputBox").val(currChars.concat(selection.toUpperCase()));
         } else if (shift === true && isNaN(selection)) {
             $("#inputBox").val(currChars.concat(selection.toUpperCase()));
@@ -37,14 +36,15 @@ function saveBlog(blog) {
 
 // delete blog from local storage
 function cancelBlog() {
-    if (confirm("Are you sure you want to delete the blog entirely?") == true) {
-        if (confirm("This action cannot be undone!") == true) {
+    if (confirm("Are you sure you want to delete the blog entirely?") === true) {
+        if (confirm("This action cannot be undone!") === true) {
             window.localStorage.removeItem("blog");
             document.location.reload();
         }
     }
 }
 
+// get the blog from local storage to the input box
 function getBlog() {
     document.getElementById("inputBox").value = window.localStorage.getItem("blog");
 }
