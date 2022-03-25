@@ -12,17 +12,17 @@ function toggleCapsLock() {
 
 // add or delete characters to/from input area
 function addChar(selection) {
-    var currChars = $("#inputArea").val();
+    var currChars = $("#inputBox").val();
     if (selection === "delete") {
-        $("#inputArea").val(currChars.substring(0, currChars.length - 1));
+        $("#inputBox").val(currChars.substring(0, currChars.length - 1));
     } else {
         if (capsLock === true) {
-            $("#inputArea").val(currChars.concat(selection.toUpperCase()));
+            $("#inputBox").val(currChars.concat(selection.toUpperCase()));
         } else if (shift === true && isNaN(selection)) {
-            $("#inputArea").val(currChars.concat(selection.toUpperCase()));
+            $("#inputBox").val(currChars.concat(selection.toUpperCase()));
             shift = false;
         } else {
-            $("#inputArea").val(currChars.concat(selection));
+            $("#inputBox").val(currChars.concat(selection));
         }
     }
 }
@@ -46,5 +46,5 @@ function cancelBlog() {
 }
 
 function getBlog() {
-    document.getElementById("inputArea").value = window.localStorage.getItem("blog");
+    document.getElementById("inputBox").value = window.localStorage.getItem("blog");
 }

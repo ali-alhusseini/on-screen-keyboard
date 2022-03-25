@@ -9,12 +9,14 @@
     <title>Document</title>
 </head>
 <body onload="getBlog();">
-    <div>
-        <button type="button" class="button" title="save" id="save" onclick="saveBlog('inputArea');">save</button>
-        <button type="button" class="button" title="cancel" id="cancel" onclick="cancelBlog();">cancel</button>
-    </div>
-    <div>
-        <textarea name="inputArea" id="inputArea" cols="89" rows="10" autocapitalize="on" autofocus></textarea>
+    <div id="inputArea">
+        <div>
+            <button type="button" class="button" title="save" id="save" onclick="saveBlog('inputBox');">save</button>
+            <button type="button" class="button" title="cancel" id="cancel" onclick="cancelBlog();">cancel</button>
+        </div>
+        <div>
+            <textarea name="inputBox" id="inputBox" cols="89" rows="10" autocapitalize="on" autofocus></textarea>
+        </div>
     </div>
     <div id="keyboard">
         <div>
