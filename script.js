@@ -18,8 +18,8 @@ function addChar(selection) {
     if (selection === "delete") {
         $("#inputArea").val(currChars.substring(0, currChars.length - 1));
     } else {
-        if (capsLock === true && isNaN(selection)) {
-            $("#words").val(currChars.concat(selection.toUpperCase()));
+        if (capsLock === true) {
+            $("#inputArea").val(currChars.concat(selection.toUpperCase()));
         } else if (shift === true && isNaN(selection)) {
             $("#inputArea").val(currChars.concat(selection.toUpperCase()));
             shift = false;
