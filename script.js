@@ -26,3 +26,9 @@ function addChar(selection) {
         }
     }
 }
+
+function saveBlog(blog) {
+    if (typeof Storage !== "undefined") {
+        window.localStorage.setItem("blog", document.getElementById(blog).value);
+    }
+}
