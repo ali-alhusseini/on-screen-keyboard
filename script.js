@@ -27,8 +27,14 @@ function addChar(selection) {
     }
 }
 
+// save blog to local storage
 function saveBlog(blog) {
     if (typeof Storage !== "undefined") {
         window.localStorage.setItem("blog", document.getElementById(blog).value);
     }
+}
+
+// delete blog from local storage
+function cancelBlog() {
+    window.localStorage.removeItem("blog");
 }
