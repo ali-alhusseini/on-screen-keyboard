@@ -4,4 +4,4 @@ can be retrieved when the screen refreshes. The cancel button removes the input 
 the page.
 
 
-![screenshot] ()
+![screenshot] (https://github.com/ali-alhusseini/Keyboard/blob/master/screenshot.png)
