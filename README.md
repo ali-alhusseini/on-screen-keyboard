@@ -3,5 +3,6 @@ A keyboard on Screen that types in a textarea. The input is saved to local stora
 can be retrieved when the screen refreshes. The cancel button removes the input from local storage and refreshes 
 the page.
 
+## Screenshot
 
-![screenshot] (https://github.com/ali-alhusseini/Keyboard/blob/master/screenshot.png)
+![screenshot] (https://raw.githubusercontent.com/ali-alhusseini/Keyboard/master/screenshot.png)
