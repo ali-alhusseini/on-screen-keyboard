@@ -31,10 +31,20 @@ function addChar(selection) {
 function saveBlog(blog) {
     if (typeof Storage !== "undefined") {
         window.localStorage.setItem("blog", document.getElementById(blog).value);
+        alert("The blog has been saved succesfully!");
     }
 }
 
 // delete blog from local storage
 function cancelBlog() {
-    window.localStorage.removeItem("blog");
+    if (confirm("Are you sure you want to delete the blog entirely?") == true) {
+        if (confirm("This action cannot be undone!") == true) {
+            window.localStorage.removeItem("blog");
+            document.location.reload();
+        }
+    }
+}
+
+function getBlog() {
+    document.getElementById("inputArea").value = window.localStorage.getItem("blog");
 }
