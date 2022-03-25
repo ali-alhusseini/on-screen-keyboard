@@ -9,10 +9,8 @@ function toggleShift() {
 function toggleCapsLock() {
     capsLock = capsLock !== true;
 }
-function toggleDeleteKey() {
-    deleteKey = true;
-}
 
+// add or delete characters to/from input area
 function addChar(selection) {
     var currChars = $("#inputArea").val();
     if (selection === "delete") {
