@@ -6,4 +6,4 @@ can be retrieved when the screen refreshes. The cancel button removes the input 
 the page.
 
 ## Screenshot
-![screenshot](/screenshot.png)
+![screenshot](images/screenshot.png)
