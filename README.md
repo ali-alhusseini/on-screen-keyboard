@@ -1,4 +1,4 @@
-# Keyboard on Screen
+# On-Screen Keyboard
 
 ## Overview
 A keyboard on Screen that types in a textarea. The input is saved to local storage using the "save" button, and 
